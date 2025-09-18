@@ -2,7 +2,7 @@ export function Hero() {
   return (
     <section className="mb-10 grid gap-6 md:grid-cols-2 md:items-center">
       <div className="space-y-3">
-        <h1 className="text-4xl font-bold text-white">Hi, I’m Yudhi 👋</h1>
+        <h1 className="text-4xl font-bold text-white">Hi, I’m Yudhi</h1>
         <p className="text-gray-400">Frontend developer fokus React, Next.js, Tailwind. Berpengalaman membangun POS (pagination, filter, modal) & LMS multi-tenant (Payload CMS, Docker).</p>
       </div>
       <div className="rounded-2xl border border-gray-800 bg-gray-900 p-6">
