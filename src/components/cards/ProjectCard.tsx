@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/types";
+import { withBase } from "@/lib/publicPath";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group overflow-hidden rounded-2xl border border-gray-800 bg-gray-900">
       <div className="relative aspect-[16/10]">
-        <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw" />
+        <Image src={withBase(project.image)} alt={project.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw" />
       </div>
       <div className="space-y-1 p-4">
         <h3 className="text-lg font-semibold text-white">{project.title}</h3>
