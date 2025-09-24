@@ -21,8 +21,7 @@ export function Skills() {
         {skills.map((s) => (
           <span
             key={s}
-            className="rounded-full border border-gray-700 bg-gray-800 px-3 py-1 text-sm text-gray-300"
-          >
+            className="rounded-full border border-gray-700 bg-gray-800 px-3 py-1 text-sm text-gray-300">
             {s}
           </span>
         ))}
