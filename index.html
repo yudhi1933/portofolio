@@ -1280,6 +1280,57 @@
           grid-template-columns: 1fr 1fr;
         }
       }
+
+      @media (max-width: 900px) {
+        .footer-body {
+          grid-template-columns: 1fr 1fr;
+          gap: 2.5rem;
+        }
+        .foot-brand {
+          grid-column: span 2;
+        }
+        .foot-brand p {
+          max-width: 100%;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .footer-cta {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 3rem 5%;
+        }
+        .footer-cta-btn {
+          width: 100%;
+          justify-content: center;
+        }
+        .footer-body {
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+          padding: 2.5rem 5%;
+        }
+        .foot-brand {
+          grid-column: span 2;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.75rem;
+          padding: 1.2rem 5%;
+        }
+        .back-top {
+          margin-left: auto;
+        }
+      }
+
+      @media (max-width: 380px) {
+        .footer-body {
+          grid-template-columns: 1fr;
+        }
+        .foot-brand {
+          grid-column: span 1;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1635,7 +1686,7 @@
       <div class="footer-body">
         <!-- Brand -->
         <div class="foot-brand">
-          <a href="#" class="logo">Dev<span>.</span></a>
+          <a href="#" class="logo">Yudhi<span>.</span></a>
           <div class="status-badge">
             <div class="sdot"></div>
             Sedang Magang · PT. Data Andalan Utama
