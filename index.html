@@ -928,28 +928,263 @@
       }
 
       /* ── Footer ── */
+
       footer {
-        padding: 1.8rem 5%;
+        width: 100%;
+        background: var(--cream);
         border-top: 1px solid var(--stone);
+      }
+
+      /* ── Top CTA strip ── */
+      .footer-cta {
+        padding: 4rem 5%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 0.74rem;
-        color: var(--ink4);
-        flex-wrap: wrap;
-        gap: 0.5rem;
+        gap: 2rem;
+        border-bottom: 1px solid var(--stone);
       }
-      footer a {
+      .footer-cta-text h2 {
+        font-family: var(--ff);
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        line-height: 1.05;
+        color: var(--ink);
+        margin-bottom: 0.35rem;
+      }
+      .footer-cta-text h2 em {
+        font-style: italic;
+        font-weight: 300;
+        color: var(--rust);
+      }
+      .footer-cta-text p {
+        font-size: 0.85rem;
+        color: var(--ink3);
+      }
+
+      .footer-cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--fs);
+        font-size: 0.84rem;
+        font-weight: 500;
+        padding: 0.8rem 1.8rem;
+        background: var(--ink);
+        color: var(--cream);
+        border-radius: 100px;
+        text-decoration: none;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition:
+          background 0.25s,
+          transform 0.2s;
+      }
+      .footer-cta-btn:hover {
+        background: var(--rust);
+        transform: translateY(-2px);
+      }
+      .footer-cta-btn svg {
+        transition: transform 0.25s;
+      }
+      .footer-cta-btn:hover svg {
+        transform: translateX(3px) translateY(-3px);
+      }
+
+      /* ── Main footer body ── */
+      .footer-body {
+        padding: 3.5rem 5%;
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+        gap: 3rem;
+        border-bottom: 1px solid var(--stone);
+      }
+
+      /* brand col */
+      .foot-brand .logo {
+        font-family: var(--ff);
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: var(--ink);
+        display: inline-block;
+        margin-bottom: 1rem;
+        text-decoration: none;
+      }
+      .foot-brand .logo span {
+        color: var(--rust);
+      }
+      .foot-brand p {
+        font-size: 0.82rem;
+        color: var(--ink3);
+        line-height: 1.8;
+        max-width: 230px;
+        margin-bottom: 1.5rem;
+      }
+      .social-row {
+        display: flex;
+        gap: 0.6rem;
+      }
+      .social-btn {
+        width: 36px;
+        height: 36px;
+        border: 1px solid var(--stone);
+        border-radius: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--ink3);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.22s;
+        background: var(--paper);
+      }
+      .social-btn:hover {
+        background: var(--ink);
+        border-color: var(--ink);
+        color: var(--cream);
+        transform: translateY(-2px);
+      }
+
+      /* nav cols */
+      .foot-col h4 {
+        font-family: var(--fs);
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink4);
+        margin-bottom: 1.2rem;
+      }
+      .foot-col ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .foot-col ul a {
+        font-size: 0.84rem;
         color: var(--ink3);
         text-decoration: none;
         transition: color 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
       }
-      footer a:hover {
+      .foot-col ul a::before {
+        content: "";
+        width: 0;
+        height: 1px;
+        background: var(--rust);
+        transition: width 0.25s;
+        flex-shrink: 0;
+      }
+      .foot-col ul a:hover {
         color: var(--ink);
       }
-      .foot-links {
+      .foot-col ul a:hover::before {
+        width: 12px;
+      }
+
+      /* status badge */
+      .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-size: 0.72rem;
+        font-weight: 500;
+        color: var(--rust);
+        background: rgba(191, 90, 48, 0.07);
+        border: 1px solid rgba(191, 90, 48, 0.2);
+        padding: 0.28rem 0.75rem;
+        border-radius: 100px;
+        margin-bottom: 1rem;
+      }
+      .sdot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--rust);
+        animation: blink 2s ease-in-out infinite;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
+
+      /* ── Bottom bar ── */
+      .footer-bottom {
+        padding: 1.4rem 5%;
         display: flex;
-        gap: 1.5rem;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .footer-bottom .copy {
+        font-size: 0.76rem;
+        color: var(--ink4);
+      }
+      .footer-bottom .copy strong {
+        color: var(--ink2);
+        font-weight: 500;
+      }
+
+      .footer-bottom .made {
+        font-size: 0.74rem;
+        color: var(--ink4);
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+      .made-heart {
+        color: var(--rust);
+        animation: heartbeat 1.8s ease-in-out infinite;
+        display: inline-block;
+      }
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        14% {
+          transform: scale(1.25);
+        }
+        28% {
+          transform: scale(1);
+        }
+        42% {
+          transform: scale(1.15);
+        }
+        56% {
+          transform: scale(1);
+        }
+      }
+
+      .back-top {
+        width: 34px;
+        height: 34px;
+        border: 1px solid var(--stone);
+        border-radius: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--ink3);
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: all 0.22s;
+        background: var(--paper);
+      }
+      .back-top:hover {
+        background: var(--ink);
+        border-color: var(--ink);
+        color: var(--cream);
+        transform: translateY(-2px);
       }
 
       /* ── Responsive ── */
@@ -1058,7 +1293,7 @@
         <li><a href="#projects">Proyek</a></li>
         <li><a href="#contact">Kontak</a></li>
       </ul>
-      <a href="mailto:email@kamu.com" class="nav-cta">Hubungi →</a>
+      <a href="mailto:yudhiyudhitok@gmail.com" class="nav-cta">Hubungi →</a>
       <div class="ham" id="ham"><span></span><span></span><span></span></div>
     </nav>
 
@@ -1351,17 +1586,6 @@
         </div>
 
         <div class="sr">
-          <!-- <form class="cf" onsubmit="sendMsg(event)">
-        <div class="fr">
-          <div class="fg"><label>Nama</label><input type="text" placeholder="Nama kamu" required></div>
-          <div class="fg"><label>Email</label><input type="email" placeholder="email@kamu.com" required></div>
-        </div>
-        <div class="fg"><label>Perihal</label><input type="text" placeholder="Mau ngobrol tentang apa?"></div>
-        <div class="fg"><label>Pesan</label><textarea rows="5" required></textarea></div>
-        <button id="sbtn" type="submit" class="btn btn-solid" style="width:100%;justify-content:center;border-radius:10px;padding:.82rem 1.5rem;">
-          Kirim Pesan →
-        </button>
-      </form> -->
           <form class="cf" id="contact-form">
             <div class="fr">
               <div class="fg">
@@ -1392,11 +1616,105 @@
 
     <!-- ── FOOTER ── -->
     <footer>
-      <div>© 2025 <strong>Nama Anda</strong> · Dibuat dengan HTML, CSS &amp; JavaScript</div>
-      <div class="foot-links">
-        <a href="https://github.com/username">GitHub</a>
-        <a href="https://linkedin.com/in/username">LinkedIn</a>
-        <a href="mailto:email@kamu.com">Email</a>
+      <!-- CTA Strip -->
+      <div class="footer-cta">
+        <div class="footer-cta-text">
+          <h2>Punya proyek? <em>Ayo kerja sama.</em></h2>
+          <p>Terbuka untuk peluang magang, freelance, atau kolaborasi.</p>
+        </div>
+        <a href="mailto:yudhiyudhitok@gmail.com" class="footer-cta-btn">
+          Kirim Email
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7" />
+            <polyline points="7 7 17 7 17 17" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Main body -->
+      <div class="footer-body">
+        <!-- Brand -->
+        <div class="foot-brand">
+          <a href="#" class="logo">Dev<span>.</span></a>
+          <div class="status-badge">
+            <div class="sdot"></div>
+            Sedang Magang · PT. Data Andalan Utama
+          </div>
+          <p>Frontend developer otodidak yang belajar dari nol sejak April 2024. Berfokus pada UI yang bersih, responsif, dan menyenangkan digunakan.</p>
+          <div class="social-row">
+            <a href="https://github.com/yudhi1933" target="_blank" class="social-btn" title="GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/yudhi-3b1556386" target="_blank" class="social-btn" title="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+            <a href="https://instagram.com/yud_yudhi21" target="_blank" class="social-btn" title="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+                />
+              </svg>
+            </a>
+            <a href="mailto:yudhiyudhitok@gmail.com" class="social-btn" title="Email">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Nav -->
+        <div class="foot-col">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="#about">Tentang Saya</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#journey">Perjalanan</a></li>
+            <li><a href="#projects">Proyek</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </div>
+
+        <!-- Tech -->
+        <div class="foot-col">
+          <h4>Tech Stack</h4>
+          <ul>
+            <li><a href="#">HTML &amp; CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">Tailwind CSS</a></li>
+            <li><a href="#">React.js</a></li>
+            <li><a href="#">Git &amp; GitHub</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="foot-col">
+          <h4>Kontak</h4>
+          <ul>
+            <li><a href="mailto:yudhiyudhitok@gmail.com">email@kamu.com</a></li>
+            <li><a href="https://github.com/yudhi1933">github.com/username</a></li>
+            <li><a href="https://linkedin.com/in/yudhi-3b1556386">LinkedIn</a></li>
+            <li><a href="https://instagram.com/yud_yudhi21">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="copy">© 2026 <strong>Yudhi</strong> · Hak cipta dilindungi.</p>
+        <p class="made">Dibuat dengan <span class="made-heart">♥</span> menggunakan HTML, CSS &amp; JavaScript</p>
+        <a href="#" class="back-top" title="Kembali ke atas">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15" /></svg>
+        </a>
       </div>
     </footer>
 
