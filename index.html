@@ -32,6 +32,7 @@
         --ink3: #857f74;
         --ink4: #bfb9af;
         --rust: #bf5a30;
+        --green: #1ab727;
         --ff: "Fraunces", Georgia, serif;
         --fs: "DM Sans", sans-serif;
       }
@@ -1464,39 +1465,53 @@
           <div class="tick-item"><span>◆</span>CSS3</div>
           <div class="tick-item"><span>◆</span>JavaScript ES6+</div>
           <div class="tick-item"><span>◆</span>Tailwind CSS</div>
+          <div class="tick-item"><span>◆</span>Bootstrap</div>
           <div class="tick-item"><span>◆</span>React.js</div>
           <div class="tick-item"><span>◆</span>Next.js</div>
           <div class="tick-item"><span>◆</span>Shadcn UI</div>
           <div class="tick-item"><span>◆</span>Payload CMS</div>
           <div class="tick-item"><span>◆</span>Tanstack Query</div>
           <div class="tick-item"><span>◆</span>Tanstack DB</div>
-          <div class="tick-item"><span>◆</span>Git</div>
-          <div class="tick-item"><span>◆</span>GitHub</div>
-          <div class="tick-item"><span>◆</span>GitLab</div>
+          <div class="tick-item"><span>◆</span>Git & GitHub</div>
           <div class="tick-item"><span>◆</span>Responsive Design</div>
           <div class="tick-item"><span>◆</span>CSS Animation</div>
           <div class="tick-item"><span>◆</span>DOM Manipulation</div>
           <div class="tick-item"><span>◆</span>Flexbox & Grid</div>
-          <div class="tick-item"><span>◆</span>VS Code</div>
+          <div class="tick-item"><span>◆</span>MinIO</div>
+          <div class="tick-item"><span>◆</span>REST API Integration</div>
+          <div class="tick-item"><span>◆</span>Axios</div>
+          <div class="tick-item"><span>◆</span>Component-Based Architecture</div>
+          <div class="tick-item"><span>◆</span>Form Handling</div>
+          <div class="tick-item"><span>◆</span>Vite</div>
+          <div class="tick-item"><span>◆</span>Node.js</div>
+          <div class="tick-item"><span>◆</span>Docker (Basic)</div>
+          <div class="tick-item"><span>◆</span>Postman</div>
           <!-- duplicate for seamless loop -->
           <div class="tick-item"><span>◆</span>HTML5</div>
           <div class="tick-item"><span>◆</span>CSS3</div>
           <div class="tick-item"><span>◆</span>JavaScript ES6+</div>
           <div class="tick-item"><span>◆</span>Tailwind CSS</div>
+          <div class="tick-item"><span>◆</span>Bootstrap</div>
           <div class="tick-item"><span>◆</span>React.js</div>
           <div class="tick-item"><span>◆</span>Next.js</div>
           <div class="tick-item"><span>◆</span>Shadcn UI</div>
           <div class="tick-item"><span>◆</span>Payload CMS</div>
           <div class="tick-item"><span>◆</span>Tanstack Query</div>
           <div class="tick-item"><span>◆</span>Tanstack DB</div>
-          <div class="tick-item"><span>◆</span>Git</div>
-          <div class="tick-item"><span>◆</span>GitHub</div>
-          <div class="tick-item"><span>◆</span>GitLab</div>
+          <div class="tick-item"><span>◆</span>Git & GitHub</div>
           <div class="tick-item"><span>◆</span>Responsive Design</div>
           <div class="tick-item"><span>◆</span>CSS Animation</div>
           <div class="tick-item"><span>◆</span>DOM Manipulation</div>
           <div class="tick-item"><span>◆</span>Flexbox & Grid</div>
-          <div class="tick-item"><span>◆</span>VS Code</div>
+          <div class="tick-item"><span>◆</span>MinIO</div>
+          <div class="tick-item"><span>◆</span>REST API Integration</div>
+          <div class="tick-item"><span>◆</span>Axios</div>
+          <div class="tick-item"><span>◆</span>Component-Based Architecture</div>
+          <div class="tick-item"><span>◆</span>Form Handling</div>
+          <div class="tick-item"><span>◆</span>Vite</div>
+          <div class="tick-item"><span>◆</span>Node.js</div>
+          <div class="tick-item"><span>◆</span>Docker (Basic)</div>
+          <div class="tick-item"><span>◆</span>Postman</div>
         </div>
       </div>
     </section>
@@ -1626,11 +1641,11 @@
             <div class="fr">
               <div class="fg">
                 <label>Nama</label>
-                <input type="text" name="name" placeholder="Nama Kamu" required />
+                <input type="text" name="name" placeholder="Nama Anda" required />
               </div>
               <div class="fg">
                 <label>Email</label>
-                <input type="email" name="email" placeholder="EmailK  amu@gmail.com" required />
+                <input type="email" name="email" placeholder="EmailAnda@gmail.com" required />
               </div>
             </div>
 
@@ -1814,14 +1829,14 @@
           .then(() => {
             btn.textContent = "✓ Pesan Terkirim!";
 
-            btn.classList.remove("bg-black");
+            btn.classList.remove("bg-green-600", "hover:bg-green-700");
             btn.classList.add("bg-green-600", "hover:bg-green-700");
 
             setTimeout(() => {
               btn.textContent = "Kirim Pesan →";
 
               btn.classList.remove("bg-green-600", "hover:bg-green-700");
-              btn.classList.add("bg-black");
+              btn.classList.add("bg-green-600", "hover:bg-green-700");
 
               form.reset();
             }, 3000);
